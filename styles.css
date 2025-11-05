@@ -5,115 +5,182 @@
   font-style: normal;
 }
 
-html {
+
+.navlink-a {
+/* width: 16px; height: 14px; Fuck with the buttons  */
+background: #e0e0e0;
+box-shadow: 
+  inset -2px -2px #808080,
+  inset 2px 2px #ffffff;
+border:1px solid #404040;
+padding: 2px;
+color: black;
+display: inline-block; /* makes <a> behave like a button */
+}
+
+.navlink-a:active {
+/* width: 16px; height: 14px; */
+background: #e0e0e0;
+box-shadow: 
+  inset 2px 2px #808080,
+  inset -2px -2px #ffffff;
+border:1px solid #404040;
+padding: 2px;
+color: black;
+display: inline-block; /* makes <a> behave like a button */
+}
+
+.profileimg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.navli {
+    margin: 0 10px;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+body {
+    background-color: #ffffff;
+}
+ul {
+    list-style-type: none;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+}
+
+button { 
+background: #e0e0e0;
+box-shadow: 
+  inset -2px -2px #808080,
+  inset 2px 2px #ffffff;
+border:1px solid #404040;
+padding: 2px;
+color: black;
+}
+
+button:active { 
+background: #e0e0e0;
+box-shadow: 
+  inset 2px 2px #808080,
+  inset -2px -2px #ffffff;
+border:1px solid #404040;
+padding: 2px;
+color: black;
+}
+
+
+.rot90 {
+    rotate: 90;
+}
+
+/*
+.profile-ring {
+  width: 150px;
+  height: 150px;
+  
+  border-radius: 50%;
+  padding: 5px; 
+  
+  background:
+    
+    radial-gradient(
+      white 60%, 
+      transparent 60.5%
+    ),
+    conic-gradient(
+      #4285F4 0deg,
+      #4285F4 90deg,
+      #34A853 90deg,
+      #34A853 180deg,
+      #FBBC05 180deg,
+      #FBBC05 270deg,
+      #EA4335 270deg,
+      #EA4335 360deg
+    );
+}
+
+.profile-ring img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+*/
+
+.headerdiv { 
+background: #e0e0e0;
+box-shadow: 
+  inset -2px -2px #808080,
+  inset 2px 2px #ffffff;
+border:1px solid #404040;
+padding: 2px;
+text-align: center;
+}
+
+
+.project {
+background: #e0e0e0;
+box-shadow: 
+  inset -2px -2px #808080,
+  inset 2px 2px #ffffff;
+border:1px solid #404040;
+padding: 10px;
+margin-top: 15px;
+display: inline-block;
+margin-right: 5px;
+}
+
+.projectdiv {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+.projectbtnlink {
+width: 16px; height: 14px;
+background: #e0e0e0;
+box-shadow: 
+  inset -2px -2px #808080,
+  inset 2px 2px #ffffff;
+border:1px solid #404040;
+padding: 2px;
+text-decoration: none;
+color: black;
+}
+
+
+body {
   font-family: "DOSVGA", "Fixedsys", monospace;
   font-optical-sizing: auto;
   font-weight: 400; /* You can change this to 100–900 */
   font-style: normal;
   font-variation-settings: "wdth" 100;
-  text-decoration: none;
 }
 
-.navul {
-  display: flex;
-  justify-content: flex-end;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-li {
-    text-decoration: none;
-    list-style: none;
-}
-.navbtnselected {
-    text-decoration: none;
-    border-color: white;
-    color: white;
-    background-color: #1d1d1d;
-    border-style: none;
-    border-radius: 5px;
-    padding: 10px;
-    border-width: 2px;
-    width: 50px;
-    height: auto;
-    margin-right: 5px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-} 
-.navbtn {
-    text-decoration: none;
-    border-color: white;
-    color: white;
-    background-color: #000000;
-    border-style: none;
-    border-radius: 5px;
-    padding: 10px;
-    border-width: 2px;
-    width: 50px;
-    height: auto;
-    margin-right: 5px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-}
-.navbtn:hover {
-    text-decoration: none;
-    border-color: white;
-    color: white;
-    background-color: #1d1d1d;
-    border-style: none;
-    border-radius: 5px;
-    padding: 10px;
-    border-width: 2px;
-    width: 50px;
-    height: auto;
-    margin-right: 5px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-}
-footer {
-    border-style: solid;
-    border-color: white;
-    border-radius: 15px;
-    padding: 15px;
-}
-body {
-    background-color: black;
-    color: white;
-}
-.projectcard {
-    border-style: solid;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 15px;
-    
-    width: auto;
-    display: inline-block;
-    height: 200px;
-}
-.notice {
-    background-color: rgba(255, 255, 0, 0.377);
-    border-radius: 5px;
-    padding: 5px;
-    margin-right: 10px;
-    margin-left: 10px;
-    color: white;
-    text-decoration: none;
-    width: auto;
-    display: inline-block;
+.footerli {
+  margin-top: 10px;
+
 }
 
-.projectcard h1 {
-    margin-left: 100px;
-    margin-right: 300px;
+
+footer { 
+background: #e0e0e0;
+box-shadow: 
+  inset -2px -2px #808080,
+  inset 2px 2px #ffffff;
+border:1px solid #404040;
+padding: 2px;
+text-align: center;
+margin-top: 15px; 
 }
 
-.projectcard h1, p, h2, h3, h4, h5, h6, b {
-    color: white;
-    text-decoration: none;
+.projectimg {
+  width: auto; height: 300px;
 }
-.projectcard p {
-    padding-left: 10px;
-    padding-right: 10px;
-    color: white;
-    text-decoration: none;
-}
+
+
+

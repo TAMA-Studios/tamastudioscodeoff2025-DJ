@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "DOSVGA";
+  src: url("./fonts/MorePerfectDOSVGA.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-family: "DOSVGA", "Fixedsys", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400; /* You can change this to 100–900 */
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  text-decoration: none;
+}
+
+.navul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+    text-decoration: none;
+    list-style: none;
+}
+.navbtnselected {
+    text-decoration: none;
+    border-color: white;
+    color: white;
+    background-color: #1d1d1d;
+    border-style: none;
+    border-radius: 5px;
+    padding: 10px;
+    border-width: 2px;
+    width: 50px;
+    height: auto;
+    margin-right: 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+} 
+.navbtn {
+    text-decoration: none;
+    border-color: white;
+    color: white;
+    background-color: #000000;
+    border-style: none;
+    border-radius: 5px;
+    padding: 10px;
+    border-width: 2px;
+    width: 50px;
+    height: auto;
+    margin-right: 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.navbtn:hover {
+    text-decoration: none;
+    border-color: white;
+    color: white;
+    background-color: #1d1d1d;
+    border-style: none;
+    border-radius: 5px;
+    padding: 10px;
+    border-width: 2px;
+    width: 50px;
+    height: auto;
+    margin-right: 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+footer {
+    border-style: solid;
+    border-color: white;
+    border-radius: 15px;
+    padding: 15px;
+}
+body {
+    background-color: black;
+    color: white;
+}
+.projectcard {
+    border-style: solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    
+    width: auto;
+    display: inline-block;
+    height: 200px;
+}
+.notice {
+    background-color: rgba(255, 255, 0, 0.377);
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: white;
+    text-decoration: none;
+    width: auto;
+    display: inline-block;
+}
+
+.projectcard h1 {
+    margin-left: 100px;
+    margin-right: 300px;
+}
+
+.projectcard h1, p, h2, h3, h4, h5, h6, b {
+    color: white;
+    text-decoration: none;
+}
+.projectcard p {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    text-decoration: none;
+}
