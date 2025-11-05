@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: "DOSVGA";
   src: url("./fonts/MorePerfectDOSVGA.ttf") format("truetype");
@@ -5,155 +6,7 @@
   font-style: normal;
 }
 
-
-.navlink-a {
-/* width: 16px; height: 14px; Fuck with the buttons  */
-background: #e0e0e0;
-box-shadow: 
-  inset -2px -2px #808080,
-  inset 2px 2px #ffffff;
-border:1px solid #404040;
-padding: 2px;
-color: black;
-display: inline-block; /* makes <a> behave like a button */
-}
-
-.navlink-a:active {
-/* width: 16px; height: 14px; */
-background: #e0e0e0;
-box-shadow: 
-  inset 2px 2px #808080,
-  inset -2px -2px #ffffff;
-border:1px solid #404040;
-padding: 2px;
-color: black;
-display: inline-block; /* makes <a> behave like a button */
-}
-
-.profileimg {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
-.navli {
-    margin: 0 10px;
-    display: inline-block;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-body {
-    background-color: #ffffff;
-}
-ul {
-    list-style-type: none;
-    text-align: right;
-    padding: 0;
-    margin: 0;
-}
-
-button { 
-background: #e0e0e0;
-box-shadow: 
-  inset -2px -2px #808080,
-  inset 2px 2px #ffffff;
-border:1px solid #404040;
-padding: 2px;
-color: black;
-}
-
-button:active { 
-background: #e0e0e0;
-box-shadow: 
-  inset 2px 2px #808080,
-  inset -2px -2px #ffffff;
-border:1px solid #404040;
-padding: 2px;
-color: black;
-}
-
-
-.rot90 {
-    rotate: 90;
-}
-
-/*
-.profile-ring {
-  width: 150px;
-  height: 150px;
-  
-  border-radius: 50%;
-  padding: 5px; 
-  
-  background:
-    
-    radial-gradient(
-      white 60%, 
-      transparent 60.5%
-    ),
-    conic-gradient(
-      #4285F4 0deg,
-      #4285F4 90deg,
-      #34A853 90deg,
-      #34A853 180deg,
-      #FBBC05 180deg,
-      #FBBC05 270deg,
-      #EA4335 270deg,
-      #EA4335 360deg
-    );
-}
-
-.profile-ring img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-}
-*/
-
-.headerdiv { 
-background: #e0e0e0;
-box-shadow: 
-  inset -2px -2px #808080,
-  inset 2px 2px #ffffff;
-border:1px solid #404040;
-padding: 2px;
-text-align: center;
-}
-
-
-.project {
-background: #e0e0e0;
-box-shadow: 
-  inset -2px -2px #808080,
-  inset 2px 2px #ffffff;
-border:1px solid #404040;
-padding: 10px;
-margin-top: 15px;
-display: inline-block;
-margin-right: 5px;
-}
-
-.projectdiv {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-
-.projectbtnlink {
-width: 16px; height: 14px;
-background: #e0e0e0;
-box-shadow: 
-  inset -2px -2px #808080,
-  inset 2px 2px #ffffff;
-border:1px solid #404040;
-padding: 2px;
-text-decoration: none;
-color: black;
-}
-
-
-body {
+html {
   font-family: "DOSVGA", "Fixedsys", monospace;
   font-optical-sizing: auto;
   font-weight: 400; /* You can change this to 100–900 */
@@ -161,26 +14,154 @@ body {
   font-variation-settings: "wdth" 100;
 }
 
-.footerli {
-  margin-top: 10px;
+body {
+    background-color: black;
+    color: white;
+}
+li {
+    text-decoration: none;
+    list-style: none;
+}
+.nav {
+    margin: 0;
+    padding: 0;
+/*    display: inline-block;
+    margin-top: 21px; */
+}
 
+.ulnav img {
+  all: unset; /* removes inherited CSS */
+  display: inline-block;
 }
 
 
-footer { 
-background: #e0e0e0;
-box-shadow: 
-  inset -2px -2px #808080,
-  inset 2px 2px #ffffff;
-border:1px solid #404040;
-padding: 2px;
-text-align: center;
-margin-top: 15px; 
+.ulnav {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
 }
 
-.projectimg {
-  width: auto; height: 300px;
+.navbtnselected {
+    text-decoration: none;
+    border-color: white;
+    color: white;
+    background-color: #1d1d1d;
+    border-style: none;
+    border-radius: 5px;
+    padding: 10px;
+    border-width: 2px;
+    width: 50px;
+    height: auto;
+    margin-right: 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+} 
+.navbtn {
+    text-decoration: none;
+    border-color: white;
+    color: white;
+    background-color: #000000;
+    border-style: none;
+    border-radius: 5px;
+    padding: 10px;
+    border-width: 2px;
+    width: 50px;
+    height: auto;
+    margin-right: 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.navbtn:hover {
+    text-decoration: none;
+    border-color: white;
+    color: white;
+    background-color: #1d1d1d;
+    border-style: none;
+    border-radius: 5px;
+    padding: 10px;
+    border-width: 2px;
+    width: 50px;
+    height: auto;
+    margin-right: 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
 }
 
 
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column; /* stack elements vertically */
+}
 
+main {
+  flex: 1; /* fills available space between header and footer */
+}
+
+footer {
+  margin-top: auto; /* pushes footer to bottom when content is short */
+  border-style: solid;
+  border-color: white;
+  border-radius: 5px;
+  border-width: 1px;
+}
+
+hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.logo {
+    all: unset
+}
+
+.footericons {
+    width: 40px;
+    height: auto;
+    margin-left: 5px;
+}
+
+.invert {
+    filter: invert(100%);
+}
+
+.section1 {
+    border-style: solid;
+    border-radius: 25px;
+    border-color: white;
+    border-width: 1px;
+    padding: 10px;
+    margin-top: 20px;
+}
+header {
+    border-style: solid;
+    border-radius: 20px;
+    border-color: white;
+    border-width: 1px;
+    padding: 10px;
+    margin-top: 10px;    
+    background-image: url(./img/banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    margin-bottom: 80px;
+}
+.sectiontitle1 {
+    text-align: center;
+}
+.headerimgowntxt {
+    text-align: right;
+    text-decoration: none;
+    color: white;
+}
+.headlnk {
+    text-decoration: none;
+    color: #a8e3ff;
+}
+header h1 {
+    padding-bottom: 100px;
+}
