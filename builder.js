@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", async () => {
     const delay = ms => new Promise(r => setTimeout(r, ms));
 
-    const buildSpeed = 400;  // how long each element takes to fade in (ms)
-    const buildDelay = 120;  // how long to wait between elements (ms)
+    const buildSpeed = 400;  // fade duration per element in ms
+    const buildDelay = 120;  // delay between elements in ms
 
     try {
         const res = await fetch("page.html");
@@ -16,13 +16,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const elements = Array.from(document.body.querySelectorAll("*"));
 
-        for (const el of elements) {
+        elements.forEach(el => {
             el.style.opacity = "0";
             el.style.transition = `opacity ${buildSpeed}ms ease-out`;
-        }
+        });
+
+        document.dispatchEvent(new Event("DOMContentLoaded"));
 
         for (const el of elements) {
-            // force reflow before starting the transition
             void el.offsetWidth;
             el.style.opacity = "1";
             await delay(buildDelay);
@@ -34,4 +35,4 @@ document.addEventListener("DOMContentLoaded", async () => {
         document.body.style.color = "white";
         document.body.style.fontFamily = "monospace";
     }
-});
+}, { once: true });
