@@ -37,8 +37,20 @@ async function loadProjects() {
             if (project.notice) {
                 const notice = document.createElement("p");
                 notice.className = "notice";
-                Notic
+                notice.textContent = project.notice;
+                link.appendChild(notice);
             }
+
+            card.appendChild(link);
+            container.appendChild(card);
         });
     }
+    catch (err) {
+        console.error("failed somewhere along the way while loading projects. so close yet so far");
+        container.innerHTML = '<p>failed to get the projects</p>'
+    }
 }
+
+// load th projects when the page loads or whatever the hell DOm is
+
+document.addEventListener("DOMContentLoaded", loadProjects);
