@@ -165,3 +165,16 @@ header {
 header h1 {
     padding-bottom: 100px;
 }
+
+.projects {
+    color: white;
+}
+#projects a,
+#projects a:link,
+#projects a:visited,
+#projects a:hover,
+#projects a:active,
+#projects a * {
+    color: white !important;
+    text-decoration: none !important;
+}
