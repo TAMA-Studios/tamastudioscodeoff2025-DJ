@@ -169,6 +169,8 @@ header h1 {
 .projects {
     color: white;
 }
+
+/*
 #projects a,
 #projects a:link,
 #projects a:visited,
@@ -177,4 +179,22 @@ header h1 {
 #projects a * {
     color: white !important;
     text-decoration: none !important;
+}
+*/
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.projectcard {
+    border-color: white;
+    border-style: solid;
+}
+
+.notice {
+    background-color: rgba(255, 255, 0, 0.473);
+    padding: 10px;
+    border-radius: 5px;
+    
 }

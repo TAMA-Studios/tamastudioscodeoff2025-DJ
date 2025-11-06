@@ -15,17 +15,17 @@ async function loadProjects() {
         // build projects
         projects.forEach(project => {
             const card = document.createElement("div");
-            card.className = "projectscard";
+            card.className = "projectcard";
 
 
             const link = document.createElement("a");
             link.href = project.url;
             link.target = "_blank";
-            link.rel = "noopener norefferer";
+            link.rel = "noopener noreferer";
 
 
             const title = document.createElement("h3");
-            title.textContent = project.className;
+            title.textContent = project.name;
 
             const desc = document.createElement("p");
             desc.textContent = project.description;
