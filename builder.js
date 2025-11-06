@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", async () => {
     const delay = ms => new Promise(r => setTimeout(r, ms));
 
-    const buildSpeed = 200;  // fade-in speed in ms
-    const buildDelay = 50;   // delay between elements in ms
+    const buildSpeed = 400;  // how long each element takes to fade in (ms)
+    const buildDelay = 120;  // how long to wait between elements (ms)
 
     try {
         const res = await fetch("page.html");
@@ -16,14 +16,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const elements = Array.from(document.body.querySelectorAll("*"));
 
-        elements.forEach(el => {
+        for (const el of elements) {
             el.style.opacity = "0";
-            el.style.transition = `opacity ${buildSpeed / 1000}s ease-out`;
-        });
+            el.style.transition = `opacity ${buildSpeed}ms ease-out`;
+        }
 
         for (const el of elements) {
-            await delay(buildDelay);
+            // force reflow before starting the transition
+            void el.offsetWidth;
             el.style.opacity = "1";
+            await delay(buildDelay);
         }
     } catch (err) {
         console.error("Page build failed:", err);
