@@ -3,26 +3,30 @@ async function loadProjects() {
     if (!container) return;
 
     try {
-        // get projects json file
         const response = await fetch("projects.json");
         if (!response.ok) throw new Error("failed to uh. get the projects.");
         const projects = await response.json();
 
-
-        // clear div
         container.innerHTML = "";
 
-        // build projects
         projects.forEach(project => {
             const card = document.createElement("div");
             card.className = "projectcard";
 
+            if (project.image) {
+                card.style.backgroundImage = `url(${project.image})`;
+                card.style.backgroundSize = "cover";
+                card.style.backgroundPosition = "center";
+                card.style.backgroundRepeat = "no-repeat";
+            }
 
             const link = document.createElement("a");
             link.href = project.url;
             link.target = "_blank";
-            link.rel = "noopener noreferer";
+            link.rel = "noopener noreferrer";
 
+            const inner = document.createElement("div");
+            inner.className = "projectcard-inner";
 
             const title = document.createElement("h3");
             title.textContent = project.name;
@@ -30,27 +34,24 @@ async function loadProjects() {
             const desc = document.createElement("p");
             desc.textContent = project.description;
 
-
-            link.appendChild(title);
-            link.appendChild(desc);
+            inner.appendChild(title);
+            inner.appendChild(desc);
 
             if (project.notice) {
                 const notice = document.createElement("p");
                 notice.className = "notice";
                 notice.textContent = project.notice;
-                link.appendChild(notice);
+                inner.appendChild(notice);
             }
 
+            link.appendChild(inner);
             card.appendChild(link);
             container.appendChild(card);
         });
-    }
-    catch (err) {
-        console.error("failed somewhere along the way while loading projects. so close yet so far");
-        container.innerHTML = '<p>failed to get the projects</p>'
+    } catch (err) {
+        console.error("failed somewhere along the way while loading projects. so close yet so far", err);
+        container.innerHTML = "<p>failed to get the projects</p>";
     }
 }
-
-// load th projects when the page loads or whatever the hell DOm is
 
 document.addEventListener("DOMContentLoaded", loadProjects);
