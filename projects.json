@@ -1,21 +1,18 @@
-[
-  {
-    "name": "ASEOHA",
+{
+  "ASEOHA": {
     "description": "Addon for the minecraft mod new tardis mod for the versions forge 1.20.1, 1.19.2 and 1.16.5",
     "url": "./projects/aseoha",
     "notice": "Content used is owned by BBC Studios.",
     "image": "https://media.forgecdn.net/attachments/1009/12/2024-11-06_00.png"
   },
-  {
-    "name": "Operation Night Hawk",
+  "Operation Night Hawk": {
     "warn": "Info unknown.",
     "hint": "This project isnt very well documented or made fore that matter so",
     "url": "https://discord.gg/tamastudios"
   },
-  {
-    "name": "TTS (Through Time and Space)",
+  "TTS (Through Time and Space)": {
     "description": "A TArdis mod for minecraft forge 1.20.1",
     "url": "./projects/tts",
     "notice": "Content used is owned by BBC Studios."
   }
-]
+}

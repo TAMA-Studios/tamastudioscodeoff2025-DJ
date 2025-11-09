@@ -229,3 +229,10 @@ a {
     width: 85%;
     margin-bottom: 15px;
 }
+
+
+.lightonlight {
+    background-color: #0000006c;
+    border-radius: 15px;
+    display: inline;
+}
