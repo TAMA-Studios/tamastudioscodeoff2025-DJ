@@ -51,6 +51,13 @@ async function loadProjects() {
                 inner.appendChild(warn);
             }
 
+            if (project.hint) {
+                const hint = document.createElement("p");
+                hint.className = "hint";
+                hint.textContent = project.hint;
+                inner.appendChild(hint);
+            }
+
             link.appendChild(inner);
             card.appendChild(link);
             container.appendChild(card);
