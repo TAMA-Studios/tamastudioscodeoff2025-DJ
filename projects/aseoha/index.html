@@ -17,10 +17,10 @@
     <hr>
     <header style="background-image: url(https://media.forgecdn.net/attachments/1009/12/2024-11-06_00.png);">
         <h1 class="lightonlight">TAMA Studios | Project - ASEOHA</h1>
-        <p id="project.aseoha.description"></p>
+        <p id="description"></p>
         <p class="headerimgowntxt lightonlight">Img from <a href="https://tamastudios.us" class="headlnk"><b>TAMA Studios</b></a></p>
     </header>
-    <div class="section1"></div>
+    <div class="section1" id=""></div>
 </main>
 <footer>
     <div class="footerl">
@@ -33,5 +33,11 @@
     </div>
 </footer>
 </body>
-<script src="/easyref.js"></script>
+<script>
+    async function load() {
+        document.getElementById("description").textContent = "Addon for the minecraft mod new tardis mod for the versions forge 1.20.1, 1.19.2 and 1.16.5";
+    }
+    
+    document.addEventListener("DOMContentLoaded", load);
+</script>
 </html>
