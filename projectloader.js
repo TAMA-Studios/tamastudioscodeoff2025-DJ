@@ -44,6 +44,13 @@ async function loadProjects() {
                 inner.appendChild(notice);
             }
 
+            if (project.warn) {
+                const warn = document.createElement("p");
+                warn.className = "warn";
+                warn.textContent = project.warn;
+                inner.appendChild(warn);
+            }
+
             link.appendChild(inner);
             card.appendChild(link);
             container.appendChild(card);
